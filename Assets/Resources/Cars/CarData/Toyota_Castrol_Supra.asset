@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e148ba1b26c394c42b08a8d6814eaf32, type: 3}
+  m_Name: Toyota_Castrol_Supra
+  m_EditorClassIdentifier: 
+  carBrandName: Tacoma
+  carName: Astral Super
+  year: 1997
+  Power: 493HP @ 6000RPM
+  Torque: 638Nm @ 4500RPM
+  Gearbox: 6-Speed Sequential Gearbox
+  Drivetrain: RWD
+  carIcon: {fileID: 21300000, guid: 044297c4c50b1494c929c984334b732a, type: 3}
+  carPrefab: {fileID: 8799979837434945804, guid: ff0eec0497ef7ee44b189377355a1cde, type: 3}

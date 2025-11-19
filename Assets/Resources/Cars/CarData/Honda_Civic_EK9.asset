@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e148ba1b26c394c42b08a8d6814eaf32, type: 3}
+  m_Name: Honda_Civic_EK9
+  m_EditorClassIdentifier: 
+  carBrandName: Honma
+  carName: Sirius EB9
+  year: 1995
+  Power: 182HP @ 8200RPM
+  Torque: 160Nm @ 7500RPM
+  Gearbox: 5-Speed H-Shifter Gearbox
+  Drivetrain: FWD
+  carIcon: {fileID: 21300000, guid: d071c4fa05ae06849a6cc20151bccfb7, type: 3}
+  carPrefab: {fileID: 4114630434810047879, guid: 272a4b72c0e7a0e4fa838f11e828cbf6, type: 3}

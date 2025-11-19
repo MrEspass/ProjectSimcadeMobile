@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e148ba1b26c394c42b08a8d6814eaf32, type: 3}
+  m_Name: Lamborghini_Huracan_LP610_4
+  m_EditorClassIdentifier: 
+  carBrandName: Lanzaini
+  carName: Macan
+  year: 2014
+  Power: 602HP @ 8250RPM
+  Torque: 560Nm @ 6500RPM
+  Gearbox: 7-Speed Sequential Gearbox
+  Drivetrain: AWD
+  carIcon: {fileID: 21300000, guid: be76da450ad9af241b1a28f5e4578131, type: 3}
+  carPrefab: {fileID: 6572494838884500524, guid: d29cea0c475aff8439f33c413ebbbac7, type: 3}
