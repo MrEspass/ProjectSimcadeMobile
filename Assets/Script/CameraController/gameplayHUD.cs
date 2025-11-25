@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class gameplayHUD : MonoBehaviour
 {
-    CarController carController;
+    [SerializeField] CarController carController;
+    [SerializeField] CarTrackDataLogger carTrackDataLogger;
 
     [Range(0.5f,1f)]public float HUDScale = 0.9f;
-    public Canvas canvasHUD;
+    public Canvas[] canvasHUD;
     public Slider rpmBarRed;
     public Slider rpmBarBlue;
     public Slider rpmLimiterRed;
@@ -23,20 +25,28 @@ public class gameplayHUD : MonoBehaviour
     public Slider turbominus;
     public GameObject turboHUD;
     public Text advanceTelemetry;
+    public Text lapTimer;
+    public Text lapRecord;
+    public Text lapCount;
 
     // Start is called before the first frame update
     void Start()
     {
         carController = GetComponentInParent<CarController>();
+        carTrackDataLogger = GetComponentInParent<CarTrackDataLogger>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        canvasHUD.transform.localScale = new Vector3(HUDScale, HUDScale, HUDScale);
+        for(int i = 0; i < canvasHUD.Length; i++) 
+        {
+            canvasHUD[i].transform.localScale = new Vector3(HUDScale, HUDScale, HUDScale);
+        }
         carTelemetry();
         pedalInput();
         carAdvanceTelemetry();
+        PlayerLapInfo();
     }
 
     void carTelemetry() 
@@ -165,7 +175,28 @@ public class gameplayHUD : MonoBehaviour
             (int)RLForce + "  " + (int)RRForce + " " + (int)RearForceDiff + "\n" +
             "\n"
             ;
+    }
 
-        
+    void PlayerLapInfo() 
+    {
+        int _Lap = carTrackDataLogger.Lap;
+        string _lapTimer = carTrackDataLogger.lapTimerString;
+        string _lapBestTime = carTrackDataLogger.lapBestTimeString;
+        string[] _lapTimeRecord = carTrackDataLogger.lapTimeRecordString;
+        string[] _checkpointTimeRecord = carTrackDataLogger.checkpointTimeRecordString;
+        string lapTimeRecord = string.Join("\n", _lapTimeRecord.AsEnumerable().Reverse());
+
+        lapTimer.text = _lapTimer.ToString();
+        lapCount.text = _Lap.ToString();
+
+        lapRecord.text =
+            "Lap" + "\n" +
+            "\n" +
+            "\n" +
+            "Best Time" + "\n" +
+            _lapBestTime.ToString() + "\n" +
+            "\n" +
+            "Lap Record" + "\n" +
+            lapTimeRecord;
     }
 }

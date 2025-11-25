@@ -10,6 +10,7 @@ public class GraphicSettings : MonoBehaviour
     {
         Application.targetFrameRate = (int)graphicSetting.framerateTarget;
         QualitySettings.SetQualityLevel((int)graphicSetting.graphicsPreset);
+        QualitySettings.vSyncCount = (int)graphicSetting.VSync;
     }
 
     // Update is called once per frame

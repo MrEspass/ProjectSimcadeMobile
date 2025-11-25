@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class CarController : MonoBehaviour
 {
+    public CarTrackDataLogger carTrackDataLogger;
     public bool isPlayer = true;
     public bool isStatic = false;
 
@@ -219,6 +220,7 @@ public class CarController : MonoBehaviour
         expectedGear = 1;
 
         PlayerInput playerInput = GetComponent<PlayerInput>();
+        carTrackDataLogger = GetComponent<CarTrackDataLogger>();
         playerInput.enabled = isPlayer && !isStatic;
 
         string cameraname = "MainCameraGameObject";
@@ -240,6 +242,7 @@ public class CarController : MonoBehaviour
         engineGameObject.SetActive(!isStatic);
         gearboxGameObject.SetActive(!isStatic);
         carRigidbody.useGravity = !isStatic;
+        carTrackDataLogger.enabled = !isStatic;
         if (playerInput.enabled)
         {
             mainCameraGameObject.SetActive(true);
@@ -270,6 +273,7 @@ public class CarController : MonoBehaviour
             wheelRPMManager();
             DrivingAidsController();
             carLightsController();
+            carTrackDataLogger.enabled = true;
         }
     }
 

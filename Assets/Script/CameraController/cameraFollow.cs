@@ -67,9 +67,9 @@ public class cameraFollow : MonoBehaviour
             case 2:
                 hoodCamera();
                 break;
-            case 3:
+            /*case 3:
                 firstPersonCamera();
-                break;
+                break;*/
         }
     }
 
@@ -80,7 +80,7 @@ public class cameraFollow : MonoBehaviour
             cameraSelect++;
             isCameraChanging = false;
         }
-        if(cameraSelect > cameraTransform.Length - 1) 
+        if(cameraSelect > cameraTransform.Length - 2) 
         {
             cameraSelect = 0;
         }

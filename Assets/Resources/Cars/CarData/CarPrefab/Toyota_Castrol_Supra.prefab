@@ -2490,7 +2490,7 @@ GameObject:
   - component: {fileID: 7404853284024933539}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: CarCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12840,7 +12840,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 200
   field of view: 55
   orthographic: 0
   orthographic size: 2
@@ -13018,7 +13018,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 200
   field of view: 55
   orthographic: 0
   orthographic size: 2
@@ -18554,6 +18554,7 @@ GameObject:
   - component: {fileID: 8799979837434945794}
   - component: {fileID: 8799979837434945795}
   - component: {fileID: 8799979837434945805}
+  - component: {fileID: 7737839000352470851}
   m_Layer: 3
   m_Name: Toyota_Castrol_Supra
   m_TagString: Player
@@ -18870,6 +18871,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 34ec2c83-4dfa-420f-8f91-9520bd4f8784
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 85776ee2-0e16-46ec-8729-f2c9a31a8fa6
+    m_ActionName: CarController/Pause
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: CarController
@@ -18988,6 +18993,32 @@ MonoBehaviour:
   frontAeroData: {fileID: 0}
   floorAeroData: {fileID: 0}
   rearAeroData: {fileID: 0}
+--- !u!114 &7737839000352470851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8799979837434945804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9466c1c15f926545861f7e2aad69ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackController: {fileID: 0}
+  carCollider: {fileID: 0}
+  Lap: 0
+  sessionTimer: 0
+  lapTimer: 0
+  lapBestTime: 0
+  lapTimeRecord: []
+  checkpointTimeRecord: []
+  checkpointTransform: []
+  checkpointChecker: 
+  lapTimerString: 
+  lapBestTimeString: 
+  lapTimeRecordString: []
+  checkpointTimeRecordString: []
 --- !u!1 &8799979837530033506
 GameObject:
   m_ObjectHideFlags: 0
@@ -25177,7 +25208,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 1000
+  far clip plane: 200
   field of view: 55
   orthographic: 0
   orthographic size: 2
@@ -25321,7 +25352,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 200
   field of view: 55
   orthographic: 0
   orthographic size: 2
@@ -25402,8 +25433,8 @@ MonoBehaviour:
       colorBlindnessType: 0
       colorBlindnessStrength: 1
   m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 1
-  m_ShowCustomSorter: 1
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []

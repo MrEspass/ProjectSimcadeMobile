@@ -13,6 +13,11 @@ public class GraphicSettingData : ScriptableObject
     {
         VeryLow = 20, Low = 30, Medium = 40, High = 60, VeryHigh = 90, Ultra = 120
     }
+    public enum VSyncTarget
+    {
+        Off = 0, VSync = 1, HalfVSync = 2
+    }
     public GraphicsPreset graphicsPreset;
     public FramerateTarget framerateTarget;
+    public VSyncTarget VSync;
 }

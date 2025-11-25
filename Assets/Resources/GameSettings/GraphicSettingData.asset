@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphicsPreset: 0
   framerateTarget: 60
+  VSync: 0
