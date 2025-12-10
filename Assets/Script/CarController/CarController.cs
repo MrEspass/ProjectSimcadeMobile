@@ -32,8 +32,8 @@ public class CarController : MonoBehaviour
     GameObject SFXGameObject;
     GameObject wheelCollidersGameObject;
     GameObject ColliderGameObject;
-    GameObject engineGameObject;
-    GameObject gearboxGameObject;
+    [SerializeField] GameObject engineGameObject;
+    [SerializeField] GameObject gearboxGameObject;
 
     [Header("Driving Aids")]
     public bool tractionControl = false;
@@ -103,8 +103,8 @@ public class CarController : MonoBehaviour
     [Range(1, 100)] public int brakeDistribution;
     public float handBrakeTorque;
 
-    carEngine engine;
-    carGearbox gearbox;
+    public carEngine engine;
+    public carGearbox gearbox;
     [Header("Car SFX")]
     public AudioSource whineSound;
     public AudioSource skidSound;
@@ -211,12 +211,12 @@ public class CarController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        engine = GetComponentInChildren<carEngine>();
+        gearbox = GetComponentInChildren<carGearbox>();
         carRigidbody = GetComponent<Rigidbody>();
         adjustWeightDistribution();
         currentGear = 1;
         engineRPM = minRPM;
-        engine = GetComponentInChildren<carEngine>();
-        gearbox = GetComponentInChildren<carGearbox>();
         expectedGear = 1;
 
         PlayerInput playerInput = GetComponent<PlayerInput>();
@@ -673,7 +673,7 @@ public class CarController : MonoBehaviour
         const float nmtolbft = 3.2808398950131f / 4.4482216152605f;
         enginePower = (engineTorque * nmtolbft) * engineRPM / 5252f;
         torqueValue = gearbox.wheelTorque(engineTorque, clutchInput);
-        gearbox.Shifter(expectedGear);
+        gearbox.Shifter();
         currentGear = gearbox.currentGear;
         maxRPM = engine.maxRPM;
         redlineRPM = engine.redlineRPM;

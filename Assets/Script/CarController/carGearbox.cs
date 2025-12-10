@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class carGearbox : MonoBehaviour
 {
-    CarController car;
+    [SerializeField] CarController car;
 
     [Header("Gearbox Setup")]
     public gearboxType gearbox;
@@ -27,12 +27,13 @@ public class carGearbox : MonoBehaviour
     [SerializeField] bool changingGearUpSequential = false;
     [SerializeField] bool changingGearDownSequential = false;
     [SerializeField] int _currentGear = 1;
+    [SerializeField] int expectedGear = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        RPM = 2000f;
         car = GetComponentInParent<CarController>();
+        RPM = 2000f;
         _currentGear = 1;
         gearRatio[0] = gearRatio[2];
     }
@@ -45,8 +46,7 @@ public class carGearbox : MonoBehaviour
 
     private void FixedUpdate()
     {
-        int expectedGear = car.expectedGear;
-        //HShifterGearChanging(expectedGear);
+        expectedGear = car.expectedGear;
     }
 
     public float wheelTorque(float engineTorque, float clutch) 
@@ -71,12 +71,12 @@ public class carGearbox : MonoBehaviour
         return RPM;
     }
 
-    public void Shifter(int expectedGear) 
+    public void Shifter() 
     {
         switch (gearbox) 
         {
             case gearboxType.HShifter:
-                hShifter(expectedGear) ;
+                hShifter() ;
                 break;
             case gearboxType.SequentialShifterNew:
                 sequentialShifterNew(expectedGear);
@@ -86,7 +86,7 @@ public class carGearbox : MonoBehaviour
                 break;
         }
     }
-    public void hShifter(int expectedGear)
+    public void hShifter()
     {
         if (expectedGear > _currentGear && !car.isChangingGearUp)
         {

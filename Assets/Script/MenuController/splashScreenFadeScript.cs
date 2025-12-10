@@ -9,7 +9,7 @@ public class splashScreenFadeScript : MonoBehaviour
 {
     [SerializeField] private GameObject eventSystemGameObject;
     [SerializeField] private PlayerInput playerInput;
-    private EventSystem eventSystem;
+    [SerializeField] private EventSystem eventSystem;
     [SerializeField] private CanvasGroup myUIGroup;
 
     [SerializeField] private bool fadeIn = false;
@@ -19,7 +19,7 @@ public class splashScreenFadeScript : MonoBehaviour
 
     public void ShowUI() 
     {
-        if (eventSystemGameObject.activeSelf)
+        if (eventSystemGameObject.activeSelf || eventSystem.enabled)
         {
             fadeOut = false;
         }
@@ -27,23 +27,35 @@ public class splashScreenFadeScript : MonoBehaviour
 
     public void HideUI(string scene)
     {
-        if (eventSystemGameObject.activeSelf) 
+        if (eventSystemGameObject.activeSelf || !eventSystem.enabled) 
         {
             fadeOut = true;
             sceneName = scene;
         }
     }
 
+    public void ExitGame() 
+    {
+        if (eventSystemGameObject.activeSelf || !eventSystem.enabled)
+        {
+            fadeOut = true;
+            Application.Quit();
+        }
+    }
+
     private void Awake()
     {
-        playerInput = GetComponent<PlayerInput>();
-        myUIGroup.alpha = 0;
+        
     }
 
     private void Start()
     {
+        playerInput = GetComponent<PlayerInput>();
+        myUIGroup.alpha = 0;
         eventSystem = eventSystemGameObject.GetComponent<EventSystem>();
         fadeIn = true;
+        fadeOut = false;
+        Time.timeScale = 1f;
     }
 
     private void Update()
@@ -75,7 +87,8 @@ public class splashScreenFadeScript : MonoBehaviour
 
         if(!fadeIn && !fadeOut)
         {
-            eventSystemGameObject.SetActive(true);
+            //eventSystemGameObject.SetActive(true);
+            eventSystem.enabled = true;
             if(playerInput != null) 
             {
                 playerInput.enabled = true;
@@ -83,7 +96,8 @@ public class splashScreenFadeScript : MonoBehaviour
         }
         else 
         {
-            eventSystemGameObject.SetActive(false);
+            //eventSystemGameObject.SetActive(false);
+            eventSystem.enabled = false;
             if (playerInput != null)
             {
                 playerInput.enabled = false;

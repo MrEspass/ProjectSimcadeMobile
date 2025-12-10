@@ -6,6 +6,9 @@ TagManager:
   tags:
   - RaceTrack
   - CarCollider
+  - Gearbox
+  - Engine
+  - CarSFX
   layers:
   - Default
   - TransparentFX
