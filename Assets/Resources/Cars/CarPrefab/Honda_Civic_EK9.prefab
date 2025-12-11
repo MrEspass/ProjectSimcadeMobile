@@ -1690,7 +1690,7 @@ MonoBehaviour:
   engineGameObject: {fileID: 4114630436452420759}
   gearboxGameObject: {fileID: 2810452307211024534}
   tractionControl: 0
-  ABS: 0
+  ABS: 1
   automaticTransmission: 1
   pitLimiter: 0
   tractionControlActivated: 0

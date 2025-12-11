@@ -1061,6 +1061,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventSystemGameObject: {fileID: 1973242577}
+  playerInput: {fileID: 0}
+  eventSystem: {fileID: 0}
   myUIGroup: {fileID: 1854712220}
   fadeIn: 0
   fadeOut: 0

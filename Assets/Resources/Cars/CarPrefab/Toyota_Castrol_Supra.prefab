@@ -18937,7 +18937,7 @@ MonoBehaviour:
   engineGameObject: {fileID: 0}
   gearboxGameObject: {fileID: 0}
   tractionControl: 0
-  ABS: 0
+  ABS: 1
   automaticTransmission: 1
   pitLimiter: 0
   tractionControlActivated: 0
@@ -27429,7 +27429,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 899f7621c2bb6304080cd55d4b222e85, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0

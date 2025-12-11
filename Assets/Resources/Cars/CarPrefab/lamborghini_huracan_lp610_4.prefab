@@ -13688,7 +13688,19 @@ MonoBehaviour:
     m_ActionId: 34ec2c83-4dfa-420f-8f91-9520bd4f8784
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5354973997385221804}
+        m_TargetAssemblyTypeName: pauseMenuController, Assembly-CSharp
+        m_MethodName: PauseBool
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 85776ee2-0e16-46ec-8729-f2c9a31a8fa6
     m_ActionName: CarController/Pause
   m_NeverAutoSwitchControlSchemes: 0
@@ -13723,7 +13735,7 @@ MonoBehaviour:
   engineGameObject: {fileID: 0}
   gearboxGameObject: {fileID: 0}
   tractionControl: 0
-  ABS: 0
+  ABS: 1
   automaticTransmission: 1
   pitLimiter: 0
   tractionControlActivated: 0
@@ -26062,3 +26074,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8157946546541087655, guid: e2be63b9f5cbd6745831deffb65e9752, type: 3}
   m_PrefabInstance: {fileID: 6138828203074750321}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5354973997385221804 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2261316925465428445, guid: e2be63b9f5cbd6745831deffb65e9752, type: 3}
+  m_PrefabInstance: {fileID: 6138828203074750321}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e216bf54d75173a4b811645fbe7800a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
