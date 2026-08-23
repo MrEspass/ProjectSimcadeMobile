@@ -15,7 +15,7 @@ public class GraphicSettingData : ScriptableObject
     }
     public enum FramerateTarget
     {
-        VeryLow = 20, Low = 30, Medium = 40, High = 60, VeryHigh = 90, Ultra = 120
+        VeryLow = 25, Low = 30, Medium = 40, High = 60, VeryHigh = 90, Ultra = 120
     }
     public enum VSyncTarget
     {

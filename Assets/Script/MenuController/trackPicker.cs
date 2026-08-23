@@ -10,6 +10,7 @@ public class trackPicker : MonoBehaviour
     [Header("UI Track Selector")]
     public RectTransform levelPagesRect;
     public Text trackNameText;
+    public Text trackSpecsText;
     public float targetPosX;
     private float _targetPosX;
     public Transform layerView;
@@ -91,6 +92,7 @@ public class trackPicker : MonoBehaviour
     void ReadCarData() 
     {
         trackNameText.text = trackDataList[trackInteger].trackName;
+        trackSpecsText.text = "Country=" + trackDataList[trackInteger].trackCountryLocation + " -   " + "Length=" + trackDataList[trackInteger].trackLength + "KM" + "  -   " + "Corners=" + trackDataList[trackInteger].trackCorners;
     }
 
     void MovePages() 

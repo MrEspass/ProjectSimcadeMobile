@@ -12,7 +12,7 @@ public class pauseMenuController : MonoBehaviour
     public GameObject EngineGameobject;
     public GameObject CarSFXGameobject;
     public bool isPaused;
-    [SerializeField] private bool _isPaused = false;
+    //[SerializeField] private bool _isPaused = false;
     // Start is called before the first frame update
     void Start()
     {

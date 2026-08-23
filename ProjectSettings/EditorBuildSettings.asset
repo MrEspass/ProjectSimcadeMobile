@@ -24,6 +24,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/RaceLoader.unity
     guid: 0c4b7a20d45b84c459ddbce294531928
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 62912244adcff39f38ddbbd8324ab26a, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: a4497a24fbce9c24993636225887b308, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 2b834934b4af4a86e926fb3fd23bedb7, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: f7b78b032033bd6498779eaa92029d91, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 7baf05a93ecdbd541821cb8f2d562607, type: 2}

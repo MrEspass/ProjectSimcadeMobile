@@ -16,6 +16,10 @@ public class GraphicSettings : MonoBehaviour
         height = Screen.height;
         resolution = (float)graphicSetting.resolution;
         resolutionScale = resolution / height;
+        int targetWidth = Mathf.RoundToInt(Screen.currentResolution.width * resolutionScale);
+        int targetHeight = Mathf.RoundToInt(Screen.currentResolution.height * resolutionScale);
+
+        Screen.SetResolution(targetWidth, targetHeight, FullScreenMode.FullScreenWindow);
         Application.targetFrameRate = (int)graphicSetting.framerateTarget;
         QualitySettings.SetQualityLevel((int)graphicSetting.graphicsPreset);
         QualitySettings.vSyncCount = (int)graphicSetting.VSync;

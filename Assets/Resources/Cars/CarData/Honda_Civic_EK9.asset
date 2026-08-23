@@ -15,9 +15,9 @@ MonoBehaviour:
   carBrandName: Honma
   carName: Sirius EB9
   year: 1995
-  Power: 182HP @ 8200RPM
-  Torque: 160Nm @ 7500RPM
+  Power: 182HP/8200RPM
+  Torque: 160Nm/7500RPM
   Gearbox: 5-Speed H-Shifter Gearbox
-  Drivetrain: FWD
+  Drivetrain: FF
   carIcon: {fileID: 21300000, guid: d071c4fa05ae06849a6cc20151bccfb7, type: 3}
   carPrefab: {fileID: 4114630434810047879, guid: 272a4b72c0e7a0e4fa838f11e828cbf6, type: 3}

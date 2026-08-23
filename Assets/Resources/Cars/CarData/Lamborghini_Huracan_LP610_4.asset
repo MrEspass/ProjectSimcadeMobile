@@ -15,9 +15,9 @@ MonoBehaviour:
   carBrandName: Lanzaini
   carName: Macan
   year: 2014
-  Power: 602HP @ 8250RPM
-  Torque: 560Nm @ 6500RPM
+  Power: 602HP/8250RPM
+  Torque: 560Nm/6500RPM
   Gearbox: 7-Speed Sequential Gearbox
-  Drivetrain: AWD
+  Drivetrain: 4WD
   carIcon: {fileID: 21300000, guid: be76da450ad9af241b1a28f5e4578131, type: 3}
   carPrefab: {fileID: 6572494838884500524, guid: d29cea0c475aff8439f33c413ebbbac7, type: 3}

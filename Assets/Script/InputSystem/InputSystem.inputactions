@@ -9,9 +9,10 @@
                     "name": "Throttle",
                     "type": "Value",
                     "id": "8fcf4017-043f-435c-b86f-52d30620e27b",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Brake",
@@ -19,23 +20,26 @@
                     "id": "445f81e9-91b8-4157-9846-5f256eaaeb3f",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "HandBrake",
                     "type": "Button",
                     "id": "411f7437-577b-42d6-a4ad-5d8aa5987dc5",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Clutch",
                     "type": "Value",
                     "id": "26f9035e-4de7-4567-b61b-2b412bcee30a",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "ShiftUp",
@@ -43,15 +47,17 @@
                     "id": "c4dd38cf-7c17-4bdb-ba7b-3b67086211ac",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "ShiftDown",
                     "type": "Button",
                     "id": "2535e611-5d44-4b6b-8428-af86614c698f",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Steer",
@@ -59,15 +65,17 @@
                     "id": "78206e07-269f-47b8-8f76-b2da4a3e4c64",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Change Camera",
                     "type": "Button",
                     "id": "72cc051d-99fa-49d5-9fe5-088d45464c6a",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Camera Rotate X",
@@ -75,7 +83,8 @@
                     "id": "230ac5d1-b99b-4cb2-ad31-c7ff30079ad1",
                     "expectedControlType": "Axis",
                     "processors": "AxisDeadzone",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Camera Rotate Y",
@@ -83,15 +92,17 @@
                     "id": "eb68bfe7-e422-4e48-8cbf-336dfa67760d",
                     "expectedControlType": "Axis",
                     "processors": "AxisDeadzone",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Left Sign",
                     "type": "Button",
                     "id": "eee1f302-8b46-4c92-951f-d655e51a3d6a",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "AxisDeadzone",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Right Sign",
@@ -99,7 +110,8 @@
                     "id": "3e841e6b-5155-4f22-a603-077c48f5e6f8",
                     "expectedControlType": "Button",
                     "processors": "AxisDeadzone",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Hazard Sign",
@@ -107,7 +119,8 @@
                     "id": "0f3c593b-1a0f-4585-bb9d-e9bcf7abb65c",
                     "expectedControlType": "Button",
                     "processors": "AxisDeadzone",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Front Light",
@@ -115,15 +128,17 @@
                     "id": "67dbe2b7-dd1a-456b-ae08-fef1e7d0dc95",
                     "expectedControlType": "Button",
                     "processors": "AxisDeadzone",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Pause",
                     "type": "Button",
                     "id": "85776ee2-0e16-46ec-8729-f2c9a31a8fa6",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "AxisDeadzone",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -151,17 +166,6 @@
                 },
                 {
                     "name": "",
-                    "id": "a0546ea3-be47-4400-a209-ddd689404d77",
-                    "path": "<AndroidGamepad>/rightTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touchscreen;AndroidGamepad",
-                    "action": "Throttle",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "d5600627-d5ed-4736-97e1-934bcd8abf7f",
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
@@ -178,17 +182,6 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Brake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "466020cb-0dae-42d8-8caa-8fa9f79d45f0",
-                    "path": "<AndroidGamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touchscreen;AndroidGamepad",
                     "action": "Brake",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -228,17 +221,6 @@
                 },
                 {
                     "name": "",
-                    "id": "7ea069cb-83da-4ccb-8494-f0808838db90",
-                    "path": "<AndroidGamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touchscreen;AndroidGamepad",
-                    "action": "ShiftUp",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "725619d2-6c6c-4fb3-8393-ff456d35310d",
                     "path": "<Keyboard>/z",
                     "interactions": "",
@@ -255,17 +237,6 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "ShiftDown",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8d5eae65-2c1d-4969-bcff-5d283244cac2",
-                    "path": "<AndroidGamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touchscreen;AndroidGamepad",
                     "action": "ShiftDown",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -360,17 +331,6 @@
                 },
                 {
                     "name": "",
-                    "id": "37fb133a-87da-4305-8a50-0cd039e80f84",
-                    "path": "<AndroidGamepad>/dpad/x",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "AndroidGamepad",
-                    "action": "Steer",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "16ce151a-2895-472d-9719-4574c8b87fcb",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
@@ -393,17 +353,6 @@
                 },
                 {
                     "name": "",
-                    "id": "e66f4c3b-ef47-4aec-87a8-a8b3e509df86",
-                    "path": "<AndroidGamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touchscreen;AndroidGamepad",
-                    "action": "HandBrake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "d369d614-3506-4e9d-8b4a-158eeecc9c9e",
                     "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
@@ -420,17 +369,6 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Change Camera",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "cb1a53be-2590-4204-98ba-87f5de2ce41a",
-                    "path": "<AndroidGamepad>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touchscreen;AndroidGamepad",
                     "action": "Change Camera",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -491,28 +429,6 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
-                    "id": "ff8d4687-c37e-4d06-949b-020fba1a6788",
-                    "path": "<AndroidGamepad>/rightStick/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touchscreen;AndroidGamepad",
-                    "action": "Camera Rotate X",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "9c48f393-9800-4a67-aa7d-968a59b8e60d",
-                    "path": "<AndroidGamepad>/rightStick/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touchscreen;AndroidGamepad",
-                    "action": "Camera Rotate X",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "",
                     "id": "b2ee2fb1-76c9-4290-8373-5ae729f8a456",
                     "path": "<Gamepad>/rightStick/y",
@@ -568,28 +484,6 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
-                    "id": "ab13191d-9af1-4847-994b-496cfde41152",
-                    "path": "<AndroidGamepad>/rightStick/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touchscreen;AndroidGamepad",
-                    "action": "Camera Rotate Y",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "6b23283e-0412-44cb-b792-98ad7c863ec2",
-                    "path": "<AndroidGamepad>/rightStick/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touchscreen;AndroidGamepad",
-                    "action": "Camera Rotate Y",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "",
                     "id": "a86baf19-5bdc-4a90-81ac-4e76dbb40d2b",
                     "path": "<Keyboard>/comma",
@@ -635,11 +529,11 @@
                 },
                 {
                     "name": "",
-                    "id": "3f858adf-81ea-406a-8743-8f6bebaf060c",
-                    "path": "<AndroidGamepad>/start",
+                    "id": "36dcbb4e-e727-40be-b0e1-2a4899feaa5c",
+                    "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Touchscreen;AndroidGamepad",
+                    "groups": ";Gamepad",
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -667,15 +561,17 @@
                     "id": "4801b2c2-d184-4910-947f-45d3ba91c3ac",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Submit",
                     "type": "Button",
                     "id": "1758724f-8dba-4cda-892d-73f3e653319a",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Cancel",
@@ -683,7 +579,8 @@
                     "id": "a19eeadf-2dae-4427-b426-5600d8d9307f",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Point",
@@ -691,7 +588,8 @@
                     "id": "6f576451-b5b1-4fb4-8661-6c932ec917bb",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Click",
@@ -699,7 +597,8 @@
                     "id": "5e7af128-4ad2-47d6-80bb-f2481040eaec",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "ScrollWheel",
@@ -707,7 +606,8 @@
                     "id": "1fef2325-5dc1-44c9-bd8f-42da4b6b7ec4",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "MiddleClick",
@@ -715,7 +615,8 @@
                     "id": "86024bc8-38ff-42d9-8507-90cf2eb31b31",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "RightClick",
@@ -723,7 +624,8 @@
                     "id": "99c2c152-f96e-489f-8ff4-77d690453e33",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "TrackedDevicePosition",
@@ -731,7 +633,8 @@
                     "id": "5af5f6e1-0a46-4c36-ac70-67e186a0cede",
                     "expectedControlType": "Vector3",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "TrackedDeviceOrientation",
@@ -739,7 +642,8 @@
                     "id": "34ec2c83-4dfa-420f-8f91-9520bd4f8784",
                     "expectedControlType": "Quaternion",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1014,6 +918,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fd032623-c401-4891-b630-f7db68d18c28",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
                     "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1553,6 +1468,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "555aafdb-6d6d-410d-a751-2f48c1b756d7",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false

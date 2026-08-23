@@ -15,9 +15,9 @@ MonoBehaviour:
   carBrandName: Tacoma
   carName: Astral Super
   year: 1997
-  Power: 493HP @ 6000RPM
-  Torque: 638Nm @ 4500RPM
+  Power: 493HP/6000RPM
+  Torque: 638Nm/4500RPM
   Gearbox: 6-Speed Sequential Gearbox
-  Drivetrain: RWD
+  Drivetrain: FR
   carIcon: {fileID: 21300000, guid: 044297c4c50b1494c929c984334b732a, type: 3}
   carPrefab: {fileID: 8799979837434945804, guid: ff0eec0497ef7ee44b189377355a1cde, type: 3}

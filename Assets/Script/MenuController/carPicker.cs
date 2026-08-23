@@ -14,6 +14,7 @@ public class carPicker : MonoBehaviour
     [Header("UI Car Selector")]
     public RectTransform levelPagesRect;
     public Text carNameText;
+    public Text carSpecsText;
     public float targetPosX;
     private float _targetPosX;
     public Transform layerView;
@@ -34,6 +35,7 @@ public class carPicker : MonoBehaviour
     public CarData[] carDataList;
     public int carInteger = 0;
     public string carDataStringName;
+    public GameObject[] carGameObjects;
 
     [Header("Input Debugging")]
     [SerializeField]Vector2 navigateInput;
@@ -56,6 +58,8 @@ public class carPicker : MonoBehaviour
     {
         GameObject _renderTexture = GameObject.Find("RawImage");
         renderTexture = _renderTexture.GetComponent<RawImage>();
+
+        // Set awake
         carPickerRotation = GetComponent<Transform>();
         cameraPosition = GameObject.Find("Main Camera");
         carInteger = Mathf.Clamp(carInteger, 0, carDataList.Length - 1);
@@ -63,30 +67,39 @@ public class carPicker : MonoBehaviour
         PlayerPrefs.SetInt("carPointer", 0);
         PlayerPrefs.SetString("carDataName", carDataStringName);
         carInteger = PlayerPrefs.GetInt("carPointer");
+
+        // Deploy Cars while awake
         Vector3 newPos = Vector3.zero;
         Quaternion newRot = Quaternion.identity;
-        GameObject childObject = Instantiate(carDataList[carInteger].carPrefab, newPos, newRot);
-        childObject.transform.SetParent(carPickerRotation);
-        SetLayerRecursively(childObject, 3);
-        childObject.transform.localPosition = newPos;
-        childObject.transform.localRotation = newRot;
+        for (int i=0;i<carDataList.Length;i++)
+        {
+            GameObject childObject = Instantiate(carDataList[i].carPrefab, newPos, newRot);
+            childObject.transform.SetParent(carPickerRotation);
+            SetLayerRecursively(childObject, 3);
+            childObject.transform.localPosition = newPos;
+            childObject.transform.localRotation = newRot;
+            childObject.SetActive(false);
+        }
+        carPickerRotation.GetChild(0).gameObject.SetActive(true);
     }
 
     private void Start()
     {
         InstatiateCarIconList();
+
+        Debug.Log(carDataList.Length);
     }
 
     void Update() 
     {
         MovePages();
         ReadCarData();
+        ChangeCar();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        
         colorFader = Mathf.Lerp(colorFader, 0f, Time.deltaTime * 1f);
         zPos = Mathf.Lerp(zPos, 7.5f, Time.deltaTime * 2f);
 
@@ -98,7 +111,7 @@ public class carPicker : MonoBehaviour
 
     void Refresh() 
     {
-        DeployNewCar();
+        //DeployNewCar();
         colorFader = 1f;
         zPos = 0f;
         carPickerRotation.transform.localRotation = new Quaternion(0f, 0f, 0f, 0f);
@@ -119,21 +132,21 @@ public class carPicker : MonoBehaviour
     void ReadCarData() 
     {
         carNameText.text = carDataList[carInteger].carBrandName + " " + carDataList[carInteger].carName + " " + carDataList[carInteger].year;
+        carSpecsText.text = carDataList[carInteger].Drivetrain + "  -   " + carDataList[carInteger].Power + "  -   " + carDataList[carInteger].Torque + "   -   " + carDataList[carInteger].Gearbox;
     }
 
-    void DeployNewCar() 
+    void ChangeCar()
     {
-        Destroy(GameObject.FindGameObjectWithTag("Player"));
         carDataStringName = carDataList[carInteger].name;
         PlayerPrefs.SetInt("carPointer", carInteger);
         PlayerPrefs.SetString("carDataName", carDataStringName);
-        Vector3 newPos = Vector3.zero;
-        Quaternion newRot = Quaternion.identity;
-        GameObject childObject = Instantiate(carDataList[carInteger].carPrefab, newPos, newRot);
-        childObject.transform.SetParent(carPickerRotation);
-        SetLayerRecursively(childObject, 3);
-        childObject.transform.localPosition = newPos;
-        childObject.transform.localRotation = newRot;
+        for (int i=0;i<carDataList.Length;i++)
+        {
+            bool Activate = (i == carInteger);
+            carPickerRotation.GetChild(i).gameObject.SetActive(Activate);
+            carPickerRotation.GetChild(i).transform.localPosition = Vector3.zero;
+            carPickerRotation.GetChild(i).transform.localRotation = Quaternion.identity;
+        }
     }
 
     void SetLayerRecursively(GameObject obj, int newLayer)
